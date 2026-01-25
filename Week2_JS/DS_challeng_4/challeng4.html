@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <textarea name="" id="textarea" style="width: 300px; height: 300px;"></textarea>
+    <br>
+    <button id="btnClick">Get Text</button>
+    <script>
+
+        let tick2 = "\u2705";
+        function getEmoji(index) {
+            let emoji = tick2
+            for (let i = 1; i <= index; i++) {
+                emoji += tick2;
+            }
+            return emoji;
+
+        }
+        document.getElementById('btnClick').addEventListener('click', () => {
+            let text = document.getElementById('textarea').value
+            const arrText = text.split('\n')
+
+
+            arrText.forEach((item, index) => {
+                let tick = getEmoji(index)
+                console.log(`${item} ${tick}`);
+            });
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>
