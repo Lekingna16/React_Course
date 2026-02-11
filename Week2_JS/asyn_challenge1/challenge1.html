@@ -11,42 +11,20 @@
 
     <script>
 
-        function whereAml(lat, lng) {
+        function whereAmI(lat, lng) {
+            let api = `https://geocode.xyz/${lat},${lng}?geoit=json`
 
-            fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
-                .then(response => {
-                    if (!response.ok)
-                        throw new Error(`To many response ${response.status}`)
-                    return response.json()
-                }).then((data) => {
-                    if (data.city === 'Throttled! See geocode.xyz/pricing')
-                        throw new Error(`To many response`)
-                    return data.country
-
-                }).then(data => {
-                    return fetch(`https://restcountries.com/v3.1/name/${data}`)
-
-                }).then(response => {
-                    if (!response.ok) {
-                        throw new Error(response.status)
-                    }
-                    return response.json()
-                }).then(data => {
-
-                    console.log(data);
-
-                }).catch(err => {
-                    console.error(`${err.message}`)
+            fetch(api)
+                .then((response) => response.json())
+                .then((location) => {
+                    console.log(location);
+                    console.log(`You are in ${location.city}, ${location.country}`);
                 })
-
         }
 
-        whereAml(52.508, 13.381)
-        whereAml(19.037, 72.873)
-        whereAml(-33.933, 18.474)
-
-
-
+        whereAmI(52.508, 13.381)
+        whereAmI(19.037, 72.873)
+        whereAmI(-33.933, 18.474)
 
     </script>
 
