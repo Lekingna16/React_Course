@@ -1,0 +1,33 @@
+.btn {
+    margin: 20 20;
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 20 0 10;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.btn-primary {
+    background-color: blue
+}
+
+.btn-primary:hover {
+    background-color: rgb(7, 7, 152);
+}
+
+.btn-danger {
+    background-color: red;
+}
+
+.btn-danger:hover {
+    background-color: rgb(112, 7, 7);
+}
+
+.btn-success {
+    background-color: green;
+}
+
+.btn-success:hover {
+    background-color: rgb(2, 60, 2);
+}
