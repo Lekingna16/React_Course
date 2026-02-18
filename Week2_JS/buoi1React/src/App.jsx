@@ -1,8 +1,5 @@
 
-
-import Notification from "./components/Notification";
-
-
+import Login from "./components/Login";
 
 function App() {
 
@@ -10,7 +7,7 @@ function App() {
   return (
     <div style={{ padding: '20px' }}>
 
-      <Notification
+      <Login type='warning'
 
       />
     </div>
