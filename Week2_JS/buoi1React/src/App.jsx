@@ -1,5 +1,5 @@
 
-import Login from "./components/Login";
+import ProductList from './components/Reponsive';
 
 function App() {
 
@@ -7,9 +7,7 @@ function App() {
   return (
     <div style={{ padding: '20px' }}>
 
-      <Login type='warning'
-
-      />
+      <ProductList />
     </div>
   )
 }

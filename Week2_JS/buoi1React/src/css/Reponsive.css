@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+}
+
+.product {
+    flex: 0 0 100%;
+}
+
+@media (min-width: 576px) {
+    .product {
+        flex: 0 0 calc(50% - 16px);
+    }
+}
+
+@media (min-width: 992px) {
+    .product {
+        flex: 0 0 calc(33.333% - 16px);
+    }
+}
