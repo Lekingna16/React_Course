@@ -5,21 +5,20 @@ function UseEffect() {
 
     useEffect(() => console.log(`Count change: ${count}`));
 
-    // su dung useEffect de log ra count khi count thay doi 
 
-    const increase = () => {    // tang bien count
+    const increase = () => {
         setCount(count + 1)
 
     }
 
-    const decrease = () => { // giam bien count
+    const decrease = () => {
         if (count > 0) {
             setCount(count - 1)
 
         }
     }
 
-    const reset = () => { //reset count ve lai ban dau 
+    const reset = () => {
         setCount(0)
 
     }

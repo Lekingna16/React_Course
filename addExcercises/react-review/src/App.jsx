@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import RenderCount from './components/RenderCount.jsx'
+
+import UseRef from "./components/UseRef"
+
 
 
 
@@ -9,7 +10,7 @@ function App() {
 
   return (
     <>
-      <RenderCount />
+      <UseRef />
     </>
   )
 }

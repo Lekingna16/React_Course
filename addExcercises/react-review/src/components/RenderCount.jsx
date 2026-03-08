@@ -3,7 +3,7 @@ import IncrementButton from "./IncrementButton";
 
 
 
-// UseCallback
+
 function RenderCount() {
     const [count, setCount] = useState(0);
 

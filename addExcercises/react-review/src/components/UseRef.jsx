@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
-// dem so lan render
-function RenderCount() {
+
+function UseRef() {
     const [count, setCount] = useState(0);
 
     const renderCount = useRef(0)
@@ -18,4 +18,4 @@ function RenderCount() {
         </div>
     )
 }
-export default RenderCount
+export default UseRef

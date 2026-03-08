@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
 
-// Child Component in useCallback
+
 
 function IncrementButton({ onIncrement }) {
     const renderCount = useRef(0);
