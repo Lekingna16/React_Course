@@ -1,12 +1,13 @@
-import Filter from "./components/Filter"
-import Todos from "./components/Todos"
 
 
+import Bai4 from "./components/bai4"
 
 function App() {
   return (
     <div>
-      <Todos />
+
+      <Bai4 />
+
     </div>
   )
 }
