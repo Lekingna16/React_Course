@@ -1,11 +1,12 @@
 import Filter from "./components/Filter"
+import Todos from "./components/Todos"
 
 
 
 function App() {
   return (
     <div>
-      <Filter />
+      <Todos />
     </div>
   )
 }
