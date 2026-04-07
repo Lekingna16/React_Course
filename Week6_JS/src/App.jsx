@@ -4,6 +4,12 @@ import About from "./components/About"
 import Contact from "./components/Contact"
 import NotFound from "./components/NotFound"
 import ProductDetail from "./components/ProductDetail"
+import Dashboard from "./components/Dashboard"
+import Profile from "./components/Profile"
+import Orders from "./components/Orders"
+import Setting from "./components/Setting"
+import DashboardHome from "./components/DashboardHome"
+import Checkout from "./components/Checkout"
 
 const App = () => {
   const items = ['Iphone', 'Samsung', 'Laptop']
@@ -35,13 +41,26 @@ const App = () => {
       <div>
         {items.map((item, index) => {
           return (
-            <Link key={index} to={`/products/${index}`}>Product {index}</Link>
+            <Link key={index} to={`/products/${index}`} style={{ display: "flex", gap: "20px" }}>Product {index}</Link>
           )
         })}
       </div>
       <Routes>
         <Route path="/products/:id" element={<ProductDetail />}></Route>
+        <Route path="/checkout" element={<Checkout />}></Route>
       </Routes>
+
+      {/* <Routes>
+
+        <Route path="/" element={<Dashboard />}>
+          <Route index element={<DashboardHome />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="orders" element={<Orders />} />
+          <Route path="setting" element={<Setting />} />
+          <Route path="checkout" element={<Checkout />} />
+        </Route>
+      </Routes> */}
+
 
 
     </BrowserRouter>
