@@ -9,6 +9,7 @@ import Stopwatch from './hooks/Stopwatch'
 import WindowResize from './hooks/WindowResize'
 import { AutoFocus } from './hooks/AutoFocus'
 import VideoController from './hooks/VideoController'
+import HeavyFiltering from './hooks/HeavyFiltering'
 
 const App = () => {
   const product = {
@@ -83,7 +84,8 @@ const App = () => {
       {/* <Stopwatch /> */}
       {/* <WindowResize /> */}
       {/* <AutoFocus /> */}
-      <VideoController />
+      {/* <VideoController /> */}
+      <HeavyFiltering></HeavyFiltering>
     </div>
   )
 }
