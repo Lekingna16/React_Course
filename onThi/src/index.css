@@ -1,0 +1,15 @@
+.product-card img {
+  width: 200px;
+  height: auto;
+}
+
+.product-card {
+  width: 300px;
+  height: auto;
+  margin: 10px 10px;
+}
+
+.button {
+  display: flex;
+  gap: 10px;
+}
