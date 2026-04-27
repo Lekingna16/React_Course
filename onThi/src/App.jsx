@@ -5,6 +5,9 @@ import UserBadge from './prop_state/UserBadge'
 import TaskList from './prop_state/TaskList'
 import FormInputEcho from './prop_state/FormInputEcho'
 import MultipleInputForm from './hooks/MultipleInputForm'
+import Stopwatch from './hooks/Stopwatch'
+import WindowResize from './hooks/WindowResize'
+import { AutoFocus } from './hooks/AutoFocus'
 
 const App = () => {
   const product = {
@@ -75,7 +78,10 @@ const App = () => {
       {/* <UserBadge user={user} /> */}
       {/* <TaskList taskList={taskList} /> */}
       {/* <FormInputEcho></FormInputEcho> */}
-      <MultipleInputForm />
+      {/* <MultipleInputForm /> */}
+      {/* <Stopwatch /> */}
+      {/* <WindowResize /> */}
+      <AutoFocus />
     </div>
   )
 }
