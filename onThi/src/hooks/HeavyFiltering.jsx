@@ -47,7 +47,7 @@ const HeavyFiltering = () => {
 
         return users.filter((user) => user.toLowerCase().includes(keyword.toLowerCase()))
 
-    }, [keyword])
+    }, [keyword, users])
 
     useEffect(() => {
 
@@ -82,19 +82,11 @@ const HeavyFiltering = () => {
     return (
         <div>
             <input type="text" placeholder='Enter name...' onChange={(e) => setKeyword(e.target.value)} />
-            {keyword ? (
-
-                (userFilter.map((user, index) => {
-                    return (
-                        <p key={index}>{user}</p>
-                    )
-                }))
-
-            ) : ((users.map((user, index) => {
+            {userFilter.map((user, index) => {
                 return (
                     <p key={index}>{user}</p>
                 )
-            })))}
+            })}
         </div>
     )
 }
