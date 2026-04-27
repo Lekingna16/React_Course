@@ -8,6 +8,7 @@ import MultipleInputForm from './hooks/MultipleInputForm'
 import Stopwatch from './hooks/Stopwatch'
 import WindowResize from './hooks/WindowResize'
 import { AutoFocus } from './hooks/AutoFocus'
+import VideoController from './hooks/VideoController'
 
 const App = () => {
   const product = {
@@ -81,7 +82,8 @@ const App = () => {
       {/* <MultipleInputForm /> */}
       {/* <Stopwatch /> */}
       {/* <WindowResize /> */}
-      <AutoFocus />
+      {/* <AutoFocus /> */}
+      <VideoController />
     </div>
   )
 }
