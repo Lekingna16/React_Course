@@ -1,9 +1,10 @@
 import React from 'react'
-import { ProductCard } from './components/ProductCard'
-import Darkmode from './components/Darkmode'
-import UserBadge from './components/UserBadge'
-import TaskList from './components/TaskList'
-import FormInputEcho from './components/FormInputEcho'
+import { ProductCard } from './prop_state/ProductCard'
+import Darkmode from './prop_state/Darkmode'
+import UserBadge from './prop_state/UserBadge'
+import TaskList from './prop_state/TaskList'
+import FormInputEcho from './prop_state/FormInputEcho'
+import MultipleInputForm from './hooks/MultipleInputForm'
 
 const App = () => {
   const product = {
@@ -72,8 +73,9 @@ const App = () => {
       {/* <ProductCard product={product}></ProductCard> */}
       {/* <Darkmode /> */}
       {/* <UserBadge user={user} /> */}
-      <TaskList taskList={taskList} />
+      {/* <TaskList taskList={taskList} /> */}
       {/* <FormInputEcho></FormInputEcho> */}
+      <MultipleInputForm />
     </div>
   )
 }
