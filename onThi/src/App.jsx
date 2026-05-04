@@ -15,6 +15,7 @@ import FetchInitData from './hooks/FetchInitData'
 import DebounceSearch from './hooks/DebounceSearch'
 import useWindowSize from './custom_hooks/useWindowSize'
 import useLocalStorage from './custom_hooks/useLocalStorage'
+import useFetch from './custom_hooks/useFetch'
 
 const App = () => {
   const product = {
@@ -81,6 +82,19 @@ const App = () => {
 
   const { size } = useWindowSize()
   const [name, setName] = useLocalStorage('name', ' ')
+  const { data, loading, error } = useFetch('https://jsonplaceholder.typicode.com/posts')
+
+  if (loading) return (<p>Loading.....</p>)
+  if (error) return (<p>Error: {error}</p>)
+  return (
+    <div>
+      {data.map((item) => {
+        return (
+          <div key={item.id}>{item.title}</div>
+        )
+      })}
+    </div>
+  )
 
   return (
 
@@ -99,8 +113,8 @@ const App = () => {
       {/* <ParentCom /> */}
       {/* <DebounceSearch /> */}
 
-      <p>Name: {name}</p>
-      <button onClick={() => setName("Kim Ngan")}>Change</button>
+      {/* <p>Name: {name}</p>
+      <button onClick={() => setName("Kim Ngan")}>Change</button> */}
 
 
 
