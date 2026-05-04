@@ -12,6 +12,7 @@ import VideoController from './hooks/VideoController'
 import HeavyFiltering from './hooks/HeavyFiltering'
 import ParentCom from './hooks/ParentCom'
 import FetchInitData from './hooks/FetchInitData'
+import DebounceSearch from './hooks/DebounceSearch'
 
 const App = () => {
   const product = {
@@ -89,7 +90,7 @@ const App = () => {
       {/* <VideoController /> */}
       {/* <HeavyFiltering></HeavyFiltering> */}
       {/* <ParentCom /> */}
-      <FetchInitData />
+      <DebounceSearch />
     </div>
   )
 }
