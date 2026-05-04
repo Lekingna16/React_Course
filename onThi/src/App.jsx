@@ -11,6 +11,7 @@ import { AutoFocus } from './hooks/AutoFocus'
 import VideoController from './hooks/VideoController'
 import HeavyFiltering from './hooks/HeavyFiltering'
 import ParentCom from './hooks/ParentCom'
+import FetchInitData from './hooks/FetchInitData'
 
 const App = () => {
   const product = {
@@ -87,7 +88,8 @@ const App = () => {
       {/* <AutoFocus /> */}
       {/* <VideoController /> */}
       {/* <HeavyFiltering></HeavyFiltering> */}
-      <ParentCom />
+      {/* <ParentCom /> */}
+      <FetchInitData />
     </div>
   )
 }
