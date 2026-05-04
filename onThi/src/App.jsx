@@ -10,6 +10,7 @@ import WindowResize from './hooks/WindowResize'
 import { AutoFocus } from './hooks/AutoFocus'
 import VideoController from './hooks/VideoController'
 import HeavyFiltering from './hooks/HeavyFiltering'
+import ParentCom from './hooks/ParentCom'
 
 const App = () => {
   const product = {
@@ -85,7 +86,8 @@ const App = () => {
       {/* <WindowResize /> */}
       {/* <AutoFocus /> */}
       {/* <VideoController /> */}
-      <HeavyFiltering></HeavyFiltering>
+      {/* <HeavyFiltering></HeavyFiltering> */}
+      <ParentCom />
     </div>
   )
 }
