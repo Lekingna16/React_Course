@@ -14,6 +14,7 @@ import ParentCom from './hooks/ParentCom'
 import FetchInitData from './hooks/FetchInitData'
 import DebounceSearch from './hooks/DebounceSearch'
 import useWindowSize from './custom_hooks/useWindowSize'
+import useLocalStorage from './custom_hooks/useLocalStorage'
 
 const App = () => {
   const product = {
@@ -79,6 +80,8 @@ const App = () => {
   ]
 
   const { size } = useWindowSize()
+  const [name, setName] = useLocalStorage('name', ' ')
+
   return (
 
     <div >
@@ -96,8 +99,10 @@ const App = () => {
       {/* <ParentCom /> */}
       {/* <DebounceSearch /> */}
 
-      <h1>Width: {size.width}</h1>
-      <h1>Height: {size.height}</h1>
+      <p>Name: {name}</p>
+      <button onClick={() => setName("Kim Ngan")}>Change</button>
+
+
 
 
 
