@@ -13,6 +13,7 @@ import HeavyFiltering from './hooks/HeavyFiltering'
 import ParentCom from './hooks/ParentCom'
 import FetchInitData from './hooks/FetchInitData'
 import DebounceSearch from './hooks/DebounceSearch'
+import useWindowSize from './custom_hooks/useWindowSize'
 
 const App = () => {
   const product = {
@@ -76,8 +77,11 @@ const App = () => {
     }
 
   ]
+
+  const { size } = useWindowSize()
   return (
-    <div>
+
+    <div >
       {/* <ProductCard product={product}></ProductCard> */}
       {/* <Darkmode /> */}
       {/* <UserBadge user={user} /> */}
@@ -90,8 +94,14 @@ const App = () => {
       {/* <VideoController /> */}
       {/* <HeavyFiltering></HeavyFiltering> */}
       {/* <ParentCom /> */}
-      <DebounceSearch />
-    </div>
+      {/* <DebounceSearch /> */}
+
+      <h1>Width: {size.width}</h1>
+      <h1>Height: {size.height}</h1>
+
+
+
+    </div >
   )
 }
 
